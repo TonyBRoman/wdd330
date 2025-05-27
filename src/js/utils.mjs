@@ -34,7 +34,7 @@ export function renderListWithTemplate(templateFn, parentElement, list, position
     parentElement.innerHTML = "";
   }
 
-  const htmlString = list.map(templateFn).jpoin("");
-  parentElement.insertAdjacentHTML(position, htmlStrings);
+  const htmlString = list.map(templateFn).join("");
+  parentElement.insertAdjacentHTML(position, htmlString);
   
 }
