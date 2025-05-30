@@ -1,7 +1,7 @@
 import { renderListWithTemplate } from "./utils.mjs";
 
 function productCardTemplate(product) {
-    console.log(`Product: ${product.Name}, FinalPrice: ${product.FinalPrice}, SuggestedRetailPrice: ${product.SuggestedRetailPrice}`);
+    // console.log(`Product: ${product.Name}, FinalPrice: ${product.FinalPrice}, SuggestedRetailPrice: ${product.SuggestedRetailPrice}`);
 
     const isDiscounted = product.SuggestedRetailPrice && product.FinalPrice < product.SuggestedRetailPrice;
     const discountTag = isDiscounted ? `<span class="discount-badge">Discount!</span>` : "";
@@ -31,7 +31,7 @@ export default class ProductList {
     async init() {  
         try {
             const list = await this.dataSource.getData();
-            console.log("Product List", list);
+            // console.log("Product List", list);
             this.renderList(list); 
         } catch (error) {
             console.error("Error fetching product list:", error);
